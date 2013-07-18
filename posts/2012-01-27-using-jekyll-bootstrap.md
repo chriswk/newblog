@@ -1,11 +1,3 @@
----
-layout: post
-title: "Using Jekyll bootstrap"
-categories: [coding]
-tags: [config, ruby, bootstrap, styling, jekyll]
----
-{% include JB/setup %}
-
 So, I toggled from a broken jekyll theme, to using
 [jekyll-bootstrap](http://jekyllbootstrap.com/ "Jekyll bootstrap"). It took me
 10 minutes from I decided until I was up and running, had ported all posts that

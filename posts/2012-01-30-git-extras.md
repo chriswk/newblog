@@ -1,11 +1,3 @@
----
-layout: post
-title: "Git Extras"
-categories: [coding]
-tags: [git, coding]
----
-{% include JB/setup %}
-
 I'm a big fan of Semantic Versioning, and as such I try to write proper
 changelogs when I do a new
 release. [Visionmedia's git-extras](https://www.github.com/visionmedia/git-extras)
@@ -15,7 +7,7 @@ Behind the scenes it works git and bash magic.. So for my own memory I'll
 note what the alias actually resolves to here.
 
 
-{% highlight bash %}
+<pre><code>
 #!/bin/sh
 
 CHANGELOG=`ls | egrep 'change|history' -i`
@@ -39,7 +31,7 @@ else
   mv $tmp $CHANGELOG
   test -n "$EDITOR" && $EDITOR $CHANGELOG
 fi
-{% endhighlight %}
+</code></pre>
 
 
 Alternately, just install git-extras, and you won't have to remember that script.

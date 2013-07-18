@@ -1,16 +1,6 @@
----
-layout: post
-title: Maven archetype creation
-author: chriswk
-published: false
-date: 2010-09-11T14:54:23+0200
-tags: [archetype, maven, war]
-categories: [coding]
----
-
-<p>I work at a company where we use Maven for main build processes, and having a decent archetype to avoid having to setup the common cruft between our projects would help.</p>
-<p>This is a documentation of the steps I did to set-up the internal company archetype for framework agnostic webapps (I.e. a maven module with packaging set to war).<br />
-Tasks for the archetype</p>
+I work at a company where we use Maven for main build processes, and having a decent archetype to avoid having to setup the common cruft between our projects would help.
+This is a documentation of the steps I did to set-up the internal company archetype for framework agnostic webapps (I.e. a maven module with packaging set to war).<br />
+Tasks for the archetype
 <ul>
 <li>Configure logback to have a debug.log written to the ${contextPath}/logs/debug.log.</li>
 <li>Set up distribution management section</li>
@@ -21,9 +11,9 @@ Tasks for the archetype</p>
 <li>Configure UTF-8 encoding for both resources and compiler</li>
 <li>Setup reporting and javadoc creation</li>
 </ul>
-<p>I'm using maven3 beta 3 for this work</p>
-<p>From the<a href="http://maven.apache.org/guides/mini/guide-creating-archetypes.html">documentation</a>:<br />
+I'm using maven3 beta 3 for this work
+From the<a href="http://maven.apache.org/guides/mini/guide-creating-archetypes.html">documentation</a>:<br />
 Use the archetype generation<br />
-[code language="bash"]<br />
+<pre><code class="bash">
 mvn archetype:generate -DgroupId=no.ovitas.archetypes -DartifactId=war-archetype -DarchetypeArtifactId=maven-archetype-archetype<br />
-[/code] </p>
+</code></pre>

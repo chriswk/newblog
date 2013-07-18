@@ -1,9 +1,3 @@
----
-layout: post
-title: "Custom .oh my zsh theme"
-categories: [system]
-tags: [linux, zsh, theme, forking]
----
 {% include JB/setup %}
 
 # My zsh theme

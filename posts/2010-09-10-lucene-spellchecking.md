@@ -1,19 +1,8 @@
----
-layout: post
-title: Lucene Spellchecking
-author: chriswk
-published: true
-date: 2010-09-10T23:28:28+0200
-tags: [lucene, java, spellchecking]
-categories: [coding]
-
----
-
 <p>To run spellchecker against a prebuilt dictionary (the content base) from the command line.</p>
 <p>The webapp uses Lucene's improved status methods to figure out whether to use the warmed up searcher, or if we need to release and recreate our searcher.</p>
 <p>Below there's some basic Java</p>
 <p>
-{% highlight java %}
+<pre><code>
 public String[] getSpellingSuggestions(String[] args) {
   String[] results = null;
   ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath*:META-INF/spring/*-config.xml");
@@ -26,11 +15,11 @@ public String[] getSpellingSuggestions(String[] args) {
   return results;
 }
 
-{% endhighlight %}
+</code></pre>
 </p>
 <p>The SpellCheckingService is an interface which looks like this:<br />
 
-{% highlight java %}
+<pre><code>
 import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.store.Directory;
@@ -44,11 +33,11 @@ public interface SpellCheckingService {
   public String[] getSimilarWordsByPopularity(String queryString, int numOfWords) throws ParseException;
 }
 
-{% endhighlight %}
+</code></pre>
 
 Probably the most interesting method in the implementation (which demonstrates the power of Lucene. I've done nothing here except tell it which dictionary (in this case our content index) to use for suggesting spellings.) is the method which returns an array of suggested words.</p>
 <p>
-{% highlight java %}
+<pre><code>
 public String[] getSimilarWords(String queryString, Directory spellIndex, int numOfWords) throws ParseException {
   String[] similarWords = null;
   try {
@@ -65,5 +54,5 @@ public String[] getSimilarWords(String queryString, Directory spellIndex, int nu
   return similarWords;
 }
 
-{% endhighlight %}
+</code></pre>
 </p>

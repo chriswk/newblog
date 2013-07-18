@@ -1,14 +1,3 @@
----
-layout: post
-title: Server and DNS thoughts
-author: chriswk
-published: true
-date: 2010-09-10T22:56:00+0200
-tags: [dns, domain-registration, domeneshop, dyndns, dynamicip, linux, server, server-admin]
-categories: [serveradmin]
-
----
-
 <p>I've been running this server since a friend and me found SuSE 8 in Germany back in 2002. It's always been sort of a pet project.<br />
 I've always been using <a href="http://www.dyndns.com">DynDns</a> for DNSing and domain registration.<br />
 Which have always given me the possibility to set-up ddclient (or other client interfaces) to update my domains when my router restarts / gets a new IP.<br />
