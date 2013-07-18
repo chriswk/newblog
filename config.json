@@ -1,0 +1,14 @@
+{
+  "name": "chriswk musing",
+  "social": {
+    "twitter": "chriswk",
+    "github": "chriswk"
+  },
+  "endpoint": {
+    "github": {
+      "user": "chriswk",
+      "repo": "newblog",
+      "branch": "gh-pages"
+    }
+  }
+}
